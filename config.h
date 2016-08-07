@@ -25,6 +25,11 @@
 #define APPLICATION_VERSION "1.0.0"
 #define APPLICATION_NAME "Micro Disk"
 #define APPLICATION_ID "MicroDisk"
+#define APPLICATION_COMPANY_ID "LuckyResistor"
 #define APPLICATION_COMPANY_NAME "Lucky Resistor"
 #define APPLICATION_COMPANY_DOMAIN "luckyresistor.me"
+#define APPLICATION_COMPANY_URL "https://luckyresistor.me"
+#define APPLICATION_COPYRIGHT "(c)2016 by Lucky Resistor"
+
+
 

@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = MicroDisk
 TEMPLATE = app
 ICON = AppIcon.icns
+RC_FILE = MicroDisk.rc
 
 SOURCES += main.cpp\
         mainwindow.cpp

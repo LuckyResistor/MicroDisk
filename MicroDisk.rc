@@ -1,0 +1,65 @@
+//
+// Lucky Resistor Micro Disk
+// --------------------------------------------------------------------------
+// (c)2016 by Lucky Resistor
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
+//
+#include "config.h"
+
+#include <windows.h>
+
+
+//LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_NEUTRAL
+#pragma code_page(1252)
+
+
+IDI_ICON1 ICON DISCARDABLE "LuckyResistor.ico"
+
+
+// Version
+
+VS_VERSION_INFO VERSIONINFO
+        FILEVERSION APPLICATION_VERSION_MAJOR,APPLICATION_VERSION_MINOR,APPLICATION_VERSION_REVISION,0
+        PRODUCTVERSION APPLICATION_VERSION_MAJOR,APPLICATION_VERSION_MINOR,APPLICATION_VERSION_REVISION,0
+	FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+	FILEFLAGS VS_FF_DEBUG
+#else
+	FILEFLAGS 0x0L
+#endif
+	FILEOS VOS__WINDOWS32
+	FILETYPE VFT_APP
+	FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904E4"
+		BEGIN
+                        VALUE "FileDescription", APPLICATION_NAME
+                        VALUE "FileVersion", APPLICATION_VERSION
+                        VALUE "InternalName", APPLICATION_NAME
+                        VALUE "LegalCopyright", APPLICATION_COPYRIGHT
+                        VALUE "OriginalFilename", APPLICATION_ID ".exe"
+                        VALUE "ProductName", APPLICATION_NAME
+                        VALUE "ProductVersion", APPLICATION_VERSION
+                        VALUE "CompanyName", APPLICATION_COMPANY_NAME
+		END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x409, 1252
+	END
+END
+

@@ -288,7 +288,11 @@ void MainWindow::generateImage(const QString &path)
         }
         ds.setByteOrder(QDataStream::LittleEndian);
         for (auto entry : directoryEntries) {
-            ds << static_cast<quint32>(entry.startBlock + firstDataBlock);
+            if (ui->nonHcCards->isChecked()) {
+                ds << static_cast<quint32>((entry.startBlock + firstDataBlock) * 512);
+            } else {
+                ds << static_cast<quint32>(entry.startBlock + firstDataBlock);
+            }
             ds << static_cast<quint32>(entry.fileSize);
             ds << static_cast<quint8>(entry.fileNameSize);
             if (ds.writeRawData(entry.fileName.constData(), entry.fileNameSize) != entry.fileNameSize) {

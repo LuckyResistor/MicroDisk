@@ -13,7 +13,7 @@ https://luckyresistor.me/applications/micro-disk/
 
 ## Copyright
 
-(c)2016 by Lucky Resistor
+(c)2017 by Lucky Resistor
 
 ## License
 
